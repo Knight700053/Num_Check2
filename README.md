@@ -1,1 +1,1 @@
-# Day-2
+# A simple task to understand git
