@@ -28,8 +28,10 @@ class numcheck{
 	
 	void oddCheck(int a){
 	
-		//Enter oddcheck code here
-
+		if ( a % 2 == 0)
+			cout << a << " is even.";
+		else
+			cout << a << " is odd.";
 	}
 
 	void primeCheck(int a){
@@ -40,7 +42,18 @@ class numcheck{
 
 	void perfectCheck(int a){
 	
-		//Enter perfect check code here
+		int i=1,sum=0;
+       		while(i<a)
+   		{      if (a%i==0)
+          		{
+				sum=sum+i;
+           			i++;
+         	 	}
+		}
+      		if(sum==a)
+        		cout<<a<<"is a perfect no.";
+		else 
+			cout<<a<<"is not a perfect no";//Enter perfect check code here
 
 	}
 
@@ -97,35 +110,6 @@ int main ()
 	return 0;
 }			
 
-void func_perfect(a)
-{ 
-	int i=1,sum=0;
-       	while(i<a)
-   	{      if (a%i==0)
-          	{
-			sum=sum+i;
-           		i++;
-         	 }
-	}
-      	if(sum==a)
-        	cout<<a<<"is a perfect no.";
-	else 
-		cout<<a<<"is not a perfect no";
-}
 
-int func_odd()
-{
-    int a;
-
-    cout << "Enter an integer: ";
-    cin >> a;
-
-    if ( a % 2 == 0)
-        cout << a << " is even.";
-    else
-        cout << a << " is odd.";
-
-    return 0;
-}
 
 
