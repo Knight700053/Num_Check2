@@ -30,14 +30,19 @@ void main ()
 	getch();
 
 }			
-             void func_perfect(a)
-         { int i=1,sum=0;
-            while(i<a)
-   {       if (a%i==0)
-          {sum=sum+i;
-           i++;
-          }
-      if(sum==a)
-     {cout<<a<<"is a perfetc no.";
-else cout<<i<<"is not a perfect no";
+
+void func_perfect(a)
+{ 
+	int i=1,sum=0;
+       	while(i<a)
+   	{      if (a%i==0)
+          	{
+			sum=sum+i;
+           		i++;
+         	 }
+	}
+      	if(sum==a)
+        	cout<<a<<"is a perfect no.";
+	else 
+		cout<<a<<"is not a perfect no";
 }
