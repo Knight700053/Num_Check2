@@ -1,12 +1,18 @@
-#include <stdio.h>
-#include <conio.h>
+#include <iostream>
+
+using namespace std;
 
 class numcheck{
 	
 	int n;
-	bool result = false;
+	bool result;
 
 	public:
+
+	numcheck(){
+		n=0;
+		result=false;
+	}
 
 	void palindromeCheck(int a){
 		int sum=0;
@@ -20,21 +26,43 @@ class numcheck{
 		if(n==sum) result=true;
 	}
 	
-	//Add the next numcheck function above this line after palindromecheck
+	void oddCheck(int a){
+	
+		//Enter oddcheck code here
+
+	}
+
+	void primeCheck(int a){
+	
+		//Enter prime check code here
+
+	}
+
+	void perfectCheck(int a){
+	
+		//Enter perfect check code here
+
+	}
+
+	void compositeCheck(int a){
+	
+		//Enter composite check code here
+	
+	}
 
 	bool getResults(){
 		return result;
 	}
 
 	
-}
+};
 
 int main ()
 {
-	int a, ch, re;
+	int a, ch;
 	bool result;
 
-	cout<<"\n"<<"What do you want to do?"<<"\n";
+	cout<<"What do you want to do?"<<"\n";
 	cout<<"Press 1 to check whether the number is a palindrome"<<"\n";
 	cout<<"Press 2 to check whether the number is an odd number"<<"\n";
 	cout<<"Press 3 to check whether the number is a prime number"<<"\n";
@@ -43,6 +71,9 @@ int main ()
 	cin>>ch;
 	cout<< "Enter a number:";
 	cin>>a;
+	
+	numcheck ob;
+	
 	switch (ch)
 	{
 		case 1: ob.palindromeCheck(a);
@@ -54,13 +85,13 @@ int main ()
 		case 3: ob.primeCheck(a);
 			cout<<ob.getResults();
 			break;
-		case 4: perfectCheck(a);
+		case 4: ob.perfectCheck(a);
 			cout<<ob.getResults();
 			break;
-		case 5: compositeCheck(a);
+		case 5: ob.compositeCheck(a);
 			cout<<ob.getResults();
 			break;
-		default: cout<< "Invalid entry :( "
+		default: cout<< "Invalid entry :( ";
 	}
 
 	return 0;
